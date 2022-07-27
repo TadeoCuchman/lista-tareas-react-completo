@@ -1,0 +1,26 @@
+form {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  border: 1px solid #ddd;
+  min-width: 500px;
+}
+
+input {
+  padding: 5px 8px;
+  border: none;
+}
+
+select {
+  padding: 5px 10px 5px 8px;
+  border: none;
+  border-left: 1px solid #ddd;
+}
+
+button {
+  border: none;
+  padding: 15px;
+}
+
+.podemos {
+  background-color: green;
+}
