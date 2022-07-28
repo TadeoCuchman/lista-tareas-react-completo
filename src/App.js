@@ -6,7 +6,13 @@ import { Form } from './Components/Form'
 import { ListaDeTareas } from "./Components/ListaDeTareas";
 
 function App() {
-  const [tareas, setTareas] = useState([])
+  const [tareas, setTareas] = useState([
+    {
+      descripcion: "tarea1",
+      prioridad: "prioridad-media",
+      completado: false
+    }
+  ])
 
   return (
     <div className="App">
