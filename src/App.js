@@ -7,11 +7,7 @@ import { ListaDeTareas } from "./Components/ListaDeTareas";
 
 function App() {
   const [tareas, setTareas] = useState([
-    {
-      descripcion: "tarea1",
-      prioridad: "prioridad-media",
-      completado: false
-    }
+
   ])
 
   return (
