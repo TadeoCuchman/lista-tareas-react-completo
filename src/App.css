@@ -38,3 +38,13 @@ main {
 .completada {
   text-decoration: line-through;
 }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+  background-color: green;
+  z-index: 100;
+}

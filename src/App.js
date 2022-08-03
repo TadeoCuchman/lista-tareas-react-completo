@@ -1,28 +1,24 @@
 import "./App.css";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 
 import { useState } from "react"
 
-import { Form } from './Components/Form'
-import { ListaDeTareas } from "./Components/ListaDeTareas";
+import { AplicacionTareas } from "./Pages/AplicacionTareas"
+import { Home } from "./Pages/Home";
 
 function App() {
   const [tareas, setTareas] = useState([
-
   ])
 
   return (
     <div className="App">
-      <main>
-        <h1>Lista de tareas!</h1>
-        <Form setTareas={setTareas} tareas={tareas} />
-        <h3>Tareas</h3>
-
-        {tareas.length > 0 ?
-          <ListaDeTareas setTareas={setTareas} tareas={tareas} /> :
-          <p id="mensaje-lista-vacia">Parece que no hay nada por aquí!</p>
-        }
-        <p className="tips">Tip: Pueden borrar tareas clickeando en ellas</p>
-      </main>
+      <Router>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/tareasApp' element={<AplicacionTareas tareas={tareas} setTareas={setTareas}/>}/>
+          {/* <Route path='/ejercicio1' element={<Ejercicio/>}/> */}
+        </Routes>
+      </Router>
     </div>
   );
 }
